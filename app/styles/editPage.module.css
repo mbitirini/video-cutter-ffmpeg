@@ -1,0 +1,218 @@
+.editPage {
+  text-align: center;
+}
+
+.videoDiv {
+  height: 350px;
+}
+
+.videoDiv video {
+  height: 100%;
+}
+
+.videoTitle {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.range_pack {
+  position: relative;
+  margin: auto;
+  display: flex;
+  margin-top: 30px;
+}
+
+.image_box > input {
+  pointer-events: none;
+  position: absolute;
+  appearance: none;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: transparent;
+}
+
+.image_box {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  position: relative;
+  height: 5rem;
+}
+
+.image_box > img {
+  height: 100%;
+  width: 80px;
+  object-fit: cover;
+}
+
+.clip_box {
+  border: 10px solid #0095ff;
+  position: absolute;
+  height: 110%;
+  box-shadow: 2000 0 5px 10px #0095ff, -400px 0 5px -10px #0095ff;
+  transform: translateY(-5%);
+  border-radius: 10px;
+}
+
+.clip_box::before,
+.clip_box::after {
+  position: absolute;
+  top: 90%;
+  transform: translateY(104%);
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.clip_box::before {
+  content: attr(data-start);
+  left: 0;
+  transform: translateY(90%) translateX(-50%);
+}
+
+.clip_box::after {
+  content: attr(data-end);
+  right: 0;
+  transform: translateY(90%) translateX(50%);
+}
+
+.clip_box_des {
+  width: 1.3rem;
+  height: 100%;
+  background-color: #0095ff;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clip_box_des:nth-child(1) {
+  left: 0;
+  transform: translateX(-70%);
+  border-radius: 10px 0 0 10px;
+}
+
+.clip_box_des:nth-child(2) {
+  right: 0;
+  transform: translateX(70%);
+  flex-flow: row-reverse;
+  border-radius: 0 10px 10px 0;
+}
+
+.clip_box_des::before,
+.clip_box_des::after {
+  content: '';
+  width: 3px;
+  background-color: #f2f2f2;
+  border-radius: 100px;
+}
+
+.clip_box_des::before {
+  height: 60%;
+}
+
+.clip_box_des::after {
+  height: 40%;
+}
+
+.range::-webkit-slider-thumb {
+  appearance: none;
+  pointer-events: all;
+  width: 30px;
+  height: 200px;
+  cursor: ew-resize;
+}
+
+.trimButton {
+  margin: 0;
+  margin-top: 60px;
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15385;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  .videoDiv {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .videoDiv video {
+    width: 100%;
+  }
+
+  .trimButton {
+    font-size: 12px;
+  }
+
+  .image_box {
+    height: 3rem;
+  }
+
+  .image_box > img {
+    width: 20px;
+  }
+
+  .clip_box {
+    border: 1px solid #0095ff;
+  }
+
+  .clip_box_des {
+    width: 1rem;
+  }
+
+  .clip_box::before,
+  .clip_box::after {
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .image_box > img {
+    width: 30px;
+  }
+
+  .clip_box {
+    border: 1px solid #0095ff;
+  }
+
+  .clip_box_des {
+    width: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .image_box > img {
+    width: 40px;
+  }
+
+  .clip_box {
+    border: 1px solid #0095ff;
+  }
+
+  .clip_box_des {
+    width: 1rem;
+  }
+}

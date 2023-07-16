@@ -1,0 +1,52 @@
+.resultPage {
+  text-align: center;
+  position: relative;
+}
+
+.videoContainer {
+  height: 350px;
+}
+
+.videoContainer video {
+  height: 100%;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.btn {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15385;
+  outline: none;
+  padding: 8px 0.8em;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  .videoContainer {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .videoContainer video {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
