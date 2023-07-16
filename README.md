@@ -1,6 +1,6 @@
 # Video Cutter App using ffmpeg-wasm
 
-Uses the [ffmpeg-wasm](https://www.npmjs.com/package/@ffmpeg/ffmpeg) library to cut videos quickly and effectively
+Uses the [ffmpeg-wasm](https://www.npmjs.com/package/@ffmpeg/ffmpeg) library to cut videos quickly and effectively.
 Built with NextJS
 
 <img width="1303" alt="Screenshot 2023-07-15 at 10 30 50 AM" src="https://github.com/mbitirini/video-cutter-ffmpeg/assets/69593342/8995c628-1103-46e2-80c7-22227a1c7238">
